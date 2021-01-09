@@ -124,7 +124,7 @@ public interface IForgePacketBuffer
     {
         T value = readRegistryId();
         if (!value.getRegistryType().equals(registrySuperType))
-            throw new IllegalArgumentException("Attempted to read an registryValue of the wrong type from the Buffer!");
+            throw new IllegalArgumentException("Attempted to read a registryValue of the wrong type from the Buffer!");
         return value;
     }
 
