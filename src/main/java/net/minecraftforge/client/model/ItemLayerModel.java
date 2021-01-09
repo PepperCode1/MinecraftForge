@@ -378,7 +378,7 @@ public final class ItemLayerModel implements IModelGeometry<ItemLayerModel>
             x1 = (float) (u + size) / width;
             break;
         default:
-            throw new IllegalArgumentException("can't handle z-oriented side");
+            throw new IllegalArgumentException("Can't handle z-oriented side");
         }
 
         float dx = side.getDirectionVec().getX() * eps / width;
