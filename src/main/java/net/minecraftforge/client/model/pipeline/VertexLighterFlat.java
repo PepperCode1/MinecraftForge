@@ -106,15 +106,15 @@ public class VertexLighterFlat extends QuadGatheringTransformer
         }
         if(posIndex == -1)
         {
-            throw new IllegalArgumentException("vertex lighter needs format with position");
+            throw new IllegalArgumentException("Vertex lighter needs format with position");
         }
         if(lightmapIndex == -1)
         {
-            throw new IllegalArgumentException("vertex lighter needs format with lightmap");
+            throw new IllegalArgumentException("Vertex lighter needs format with lightmap");
         }
         if(colorIndex == -1)
         {
-            throw new IllegalArgumentException("vertex lighter needs format with color");
+            throw new IllegalArgumentException("Vertex lighter needs format with color");
         }
     }
 
