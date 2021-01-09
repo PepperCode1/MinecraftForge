@@ -134,7 +134,7 @@ public class ForgeInternalHandler
     static LootModifierManager getLootModifierManager()
     {
         if(INSTANCE == null)
-            throw new IllegalStateException("Can not retrieve LootModifierManager until resources have loaded once.");
+            throw new IllegalStateException("Cannot retrieve LootModifierManager until resources have loaded once.");
         return INSTANCE;
     }
 }
