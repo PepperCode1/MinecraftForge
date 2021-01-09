@@ -97,7 +97,7 @@ public class ModelLoaderRegistry
     public static void registerLoader(ResourceLocation id, IModelLoader<?> loader)
     {
         if (registryFrozen)
-            throw new IllegalStateException("Can not register model loaders after models have started loading. Please use ModelRegistryEvent to register your loaders.");
+            throw new IllegalStateException("Cannot register model loaders after models have started loading. Please use ModelRegistryEvent to register your loaders.");
 
         synchronized(loaders)
         {
