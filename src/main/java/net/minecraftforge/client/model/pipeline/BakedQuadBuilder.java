@@ -121,11 +121,11 @@ public class BakedQuadBuilder implements IVertexConsumer
     {
         if(!full)
         {
-            throw new IllegalStateException("not enough data");
+            throw new IllegalStateException("Not enough data");
         }
         if(texture == null)
         {
-            throw new IllegalStateException("texture not set");
+            throw new IllegalStateException("Texture not set");
         }
         if(contractUVs)
         {
