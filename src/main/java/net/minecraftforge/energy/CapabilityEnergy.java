@@ -44,7 +44,7 @@ public class CapabilityEnergy
             public void readNBT(Capability<IEnergyStorage> capability, IEnergyStorage instance, Direction side, INBT nbt)
             {
                 if (!(instance instanceof EnergyStorage))
-                    throw new IllegalArgumentException("Can not deserialize to an instance that isn't the default implementation");
+                    throw new IllegalArgumentException("Cannot deserialize to an instance that isn't the default implementation");
                 ((EnergyStorage)instance).energy = ((IntNBT)nbt).getInt();
             }
         },
