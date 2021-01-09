@@ -319,7 +319,7 @@ public class ModelBlockAnimation
                 {
                     if(hadVar.contains(var.variable))
                     {
-                        throw new IllegalArgumentException("duplicate variable: " + var);
+                        throw new IllegalArgumentException("Duplicate variable: " + var);
                     }
                     hadVar.add(var.variable);
                 }
