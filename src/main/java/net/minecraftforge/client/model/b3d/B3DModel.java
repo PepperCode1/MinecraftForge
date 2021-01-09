@@ -137,7 +137,7 @@ public class B3DModel
         {
             if(texture > textures.size())
             {
-                logger.error("texture {} is out of range", texture);
+                logger.error("Texture {} is out of range", texture);
                 return null;
             }
             else if(texture == -1) return Texture.White;
@@ -150,7 +150,7 @@ public class B3DModel
         {
             if(brush > brushes.size())
             {
-                throw new IOException(String.format("brush %s is out of range", brush));
+                throw new IOException(String.format("Brush %s is out of range", brush));
             }
             else if(brush == -1) return null;
             return brushes.get(brush);
@@ -162,7 +162,7 @@ public class B3DModel
         {
             if(vertex > vertices.size())
             {
-                throw new IOException(String.format("vertex %s is out of range", vertex));
+                throw new IOException(String.format("Vertex %s is out of range", vertex));
             }
             return vertices.get(vertex);
         }
@@ -234,7 +234,7 @@ public class B3DModel
             dump("}");
             popLimit();
             if (root == null) {
-                throw new IOException("not found the root node in the model");
+                throw new IOException("Didn't find root node in the model");
             }
             return new B3DModel(textures, brushes, root, meshes.build());
         }
