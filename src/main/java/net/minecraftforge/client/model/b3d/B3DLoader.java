@@ -471,7 +471,7 @@ public enum B3DLoader implements ISelectiveResourceReloadListener
             {
                 if(e.getValue().startsWith("#"))
                 {
-                    LOGGER.fatal("unresolved texture '{}' for b3d model '{}'", e.getValue(), this.modelLocation);
+                    LOGGER.fatal("Unresolved texture '{}' for b3d model '{}'", e.getValue(), this.modelLocation);
                     builder.put(e.getKey(), missing);
                 }
                 else
@@ -530,7 +530,7 @@ public enum B3DLoader implements ISelectiveResourceReloadListener
                         }
                         else
                         {
-                            LOGGER.fatal("unknown mesh definition '{}' in array for b3d model '{}'", s.toString(), modelLocation);
+                            LOGGER.fatal("Unknown mesh definition '{}' in array for b3d model '{}'", s.toString(), modelLocation);
                             return this;
                         }
                     }
@@ -539,7 +539,7 @@ public enum B3DLoader implements ISelectiveResourceReloadListener
                 }
                 else
                 {
-                    LOGGER.fatal("unknown mesh definition '{}' for b3d model '{}'", e.toString(), modelLocation);
+                    LOGGER.fatal("Unknown mesh definition '{}' for b3d model '{}'", e.toString(), modelLocation);
                     return this;
                 }
             }
