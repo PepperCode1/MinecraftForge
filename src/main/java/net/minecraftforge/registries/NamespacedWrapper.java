@@ -53,7 +53,7 @@ class NamespacedWrapper<T extends IForgeRegistryEntry<T>> extends SimpleRegistry
     public <V extends T> V register(int id, RegistryKey<T> key, V value, Lifecycle lifecycle)
     {
         if (locked)
-            throw new IllegalStateException("Can not register to a locked registry. Modder should use Forge Register methods.");
+            throw new IllegalStateException("Cannot register to a locked registry. Modder should use Forge Register methods.");
 
         Validate.notNull(value);
 
