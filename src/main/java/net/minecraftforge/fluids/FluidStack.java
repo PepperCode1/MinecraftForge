@@ -76,13 +76,13 @@ public class FluidStack
     {
         if (fluid == null)
         {
-            LOGGER.fatal("Null fluid supplied to fluidstack. Did you try and create a stack for an unregistered fluid?");
-            throw new IllegalArgumentException("Cannot create a fluidstack from a null fluid");
+            LOGGER.fatal("Null fluid supplied to FluidStack. Did you try and create a stack for an unregistered fluid?");
+            throw new IllegalArgumentException("Cannot create a FluidStack from a null fluid");
         }
         else if (ForgeRegistries.FLUIDS.getKey(fluid) == null)
         {
             LOGGER.fatal("Failed attempt to create a FluidStack for an unregistered Fluid {} (type {})", fluid.getRegistryName(), fluid.getClass().getName());
-            throw new IllegalArgumentException("Cannot create a fluidstack from an unregistered fluid");
+            throw new IllegalArgumentException("Cannot create a FluidStack from an unregistered fluid");
         }
         this.fluidDelegate = fluid.delegate;
         this.amount = amount;
