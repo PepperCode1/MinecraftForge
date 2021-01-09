@@ -155,7 +155,7 @@ public class BlockModelConfiguration implements IModelConfiguration
     {
         IModelGeometry<?> geometry = getCustomGeometry();
         if (geometry == null)
-            throw new IllegalStateException("Can not use custom baking without custom geometry");
+            throw new IllegalStateException("Cannot use custom baking without custom geometry");
         return geometry.bake(this, bakery, bakedTextureGetter, modelTransform, overrides, modelLocation);
     }
 
