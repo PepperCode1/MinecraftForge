@@ -712,7 +712,7 @@ public class GameData
             List<ResourceLocation> missingRegs = snapshot.keySet().stream().filter(name -> !RegistryManager.ACTIVE.registries.containsKey(name)).collect(Collectors.toList());
             if (missingRegs.size() > 0)
             {
-                String header = "Forge Mod Loader detected missing/unknown registrie(s).\n\n" +
+                String header = "Forge Mod Loader detected missing/unknown registries.\n\n" +
                         "There are " + missingRegs.size() + " missing registries in this save.\n" +
                         "If you continue the missing registries will get removed.\n" +
                         "This may cause issues, it is advised that you create a world backup before continuing.\n\n";
@@ -931,7 +931,7 @@ public class GameData
         String prefix = ModLoadingContext.get().getActiveNamespace();
         if (warnOverrides && !oldPrefix.equals(prefix) && oldPrefix.length() > 0)
         {
-            LogManager.getLogger().info("Potentially Dangerous alternative prefix `{}` for name `{}`, expected `{}`. This could be a intended override, but in most cases indicates a broken mod.", oldPrefix, name, prefix);
+            LogManager.getLogger().info("Potentially dangerous alternative prefix `{}` for name `{}`, expected `{}`. This could be an intended override, but in most cases indicates a broken mod.", oldPrefix, name, prefix);
             prefix = oldPrefix;
         }
         return new ResourceLocation(prefix, name);
