@@ -82,9 +82,9 @@ class FixSSL {
             final SSLContext tls = SSLContext.getInstance("TLS");
             tls.init(null, instance.getTrustManagers(), null);
             HttpsURLConnection.setDefaultSSLSocketFactory(tls.getSocketFactory());
-            LogManager.getLogger().info(CORE, "Added Lets Encrypt root certificates as additional trust");
+            LogManager.getLogger().info(CORE, "Added Let's Encrypt root certificates as additional trust");
         } catch (KeyStoreException | IOException | NoSuchAlgorithmException | CertificateException | KeyManagementException e) {
-            LogManager.getLogger().fatal(CORE,"Failed to load lets encrypt certificate. Expect problems", e);
+            LogManager.getLogger().fatal(CORE,"Failed to load Let's Encrypt certificate. Expect problems", e);
         }
 
     }
